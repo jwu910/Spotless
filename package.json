@@ -1,0 +1,42 @@
+{
+  "name": "spotless",
+  "version": "0.0.1",
+  "description": "Spotify with much less. Get the best of Spotify in a CUI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('Test')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwu910/spotless.git"
+  },
+  "keywords": [
+    "spotify",
+    "music",
+    "player",
+    "cli",
+    "cui",
+    "interface",
+    "spotify-cli",
+    "spotify-cui",
+    "spotless",
+    "less",
+    "visualizer",
+    "tool",
+    "play",
+    "pause",
+    "start",
+    "stop",
+    "next",
+    "skip",
+    "track",
+    "previous",
+    "shuffle"
+  ],
+  "author": "Joshua Wu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwu910/spotless/issues"
+  },
+  "homepage": "https://github.com/jwu910/spotless#readme"
+}
