@@ -4,7 +4,7 @@
   "description": "Spotify with much less. Get the best of Spotify in a CUI.",
   "main": "index.js",
   "scripts": {
-    "test": "console.log('Test')"
+    "test": "test"
   },
   "repository": {
     "type": "git",
@@ -38,5 +38,10 @@
   "bugs": {
     "url": "https://github.com/jwu910/spotless/issues"
   },
-  "homepage": "https://github.com/jwu910/spotless#readme"
+  "homepage": "https://github.com/jwu910/spotless#readme",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "child_process": "^1.0.2",
+    "commander": "^2.14.0"
+  }
 }
