@@ -1,10 +1,15 @@
 #!/usr/bin/env node
-
 'use strict';
 
-const client_id = '35e5b7917b064414b7dc384e07d6dab8'; // Your client id
-const client_secret = require('./.client_secret');
+
+const Spotify = require('node-spotify-api');
+const client_keys = require('./.client_keys');
 const redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+
+const spotify = new Spotify({
+  id: client_keys.client_id,
+  secret: client_keys.client_secret
+});
 
 const { exec } = require('child_process');
 const program = require('commander');
@@ -34,6 +39,20 @@ program
   .command('previous')
   .action(() => {
     exec('playerctl previous');
+  })
+
+program
+  .command('search <search_string>')
+  .action((searchString) => {
+    spotify.search({ type: 'track', query: searchString }, function(err, data) {
+      if (err) {
+        return console.log('Error occurred: ' + err);
+      }
+
+      data.tracks.items.forEach(track => {
+        console.log(track.artists[0].name + ' - ' + track.name + ' [' + track.album.name + ']');
+      }); 
+    });
   })
 
 program
